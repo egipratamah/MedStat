@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Contoh {
+public class Medstat {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         
