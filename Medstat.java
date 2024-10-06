@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Medstat {
+public class Contoh {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         
@@ -34,7 +34,8 @@ public class Medstat {
                         + Math.pow(d7-mean, 2) + Math.pow(d8-mean, 2)
                         + Math.pow(d9-mean, 2) + Math.pow(d10-mean, 2));
         // Pembulatan 2 angka di belakang koma
-        double ragam = (Math.round(ragamRaw * 100.0) / 100.0) / 10;
+        double ragamRounded = (Math.round(ragamRaw * 100.0) / 100.0);
+        double ragam = ragamRounded / 10;
         
         // Hitung Simpangan Baku
         double sBRaw = Math.sqrt(ragam);
@@ -77,7 +78,7 @@ public class Medstat {
         }
             
         // Tampilkan jawaban sebenarnya
-        System.out.println("Nilai Mean-nya " + mean + " dengan Ragam " + ragam +
+        System.out.println("Nilai Mean " + mean + " dengan Ragam " + ragam +
                 " dan Simpangan Baku " + sB);
         
         input.close();
